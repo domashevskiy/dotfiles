@@ -47,6 +47,8 @@
 " MakeGreen
 "    Generic test runner that works with nose
 "
+" Coffeescript
+"    Adds coffeescript support
 " ==========================================================
 " Shortcuts
 " ==========================================================
@@ -305,3 +307,9 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
 endif
 
 set colorcolumn=79
+
+" Coffeescript configuration
+
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
